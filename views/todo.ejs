@@ -15,9 +15,11 @@
         <button type="submit">Add item</button>
       </form>
       <ul>
-        <li>Item 1</li>
-        <li>Item 2</li>
+        <% for(var i = 0; i < todos.length; i++) { %>
+        <li><%= todos[i].item %></li>
+        <% } %>
       </ul>
     </div>
+    <script src="/assets/todo-list.js"></script>
   </body>
 </html>
