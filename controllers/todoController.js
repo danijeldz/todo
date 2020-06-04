@@ -1,4 +1,8 @@
-var bodyParser = require("body-parser")
+const bodyParser = require("body-parser")
+const mongoose = require("mongoose")
+
+// connect to the database
+mongoose.connect("mongodb+srv://todo-test:todo-test@cluster0-furww.mongodb.net/<dbname>?retryWrites=true&w=majority")
 
 var data = [{ item: "buy milk" }, { item: "walk the dog" }, { item: "clean the car" }, { item: "kick some coding ass" }]
 var urlencodedParser = bodyParser.urlencoded({ extended: false })
